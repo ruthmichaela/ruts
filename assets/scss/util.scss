@@ -1,0 +1,269 @@
+$sides: (
+	t	: top,
+	b	: bottom,
+	l	: left,
+	r	: right
+);
+
+$text-alignments: (
+	l	: left,
+	r	: right,
+	c	: center
+);
+
+// --- Colors --- //
+
+@each $color-name, $color-value in $all-colors {
+	.color--#{inspect($color-name)} {
+		color: $color-value;
+		&::placeholder { color: $color-value; }
+	}
+	.bg--#{inspect($color-name)} {
+		background: $color-value;
+	}
+	.border--#{inspect($color-name)} {
+		border: 1px solid $color-value;
+	}
+	.border-bottom--#{inspect($color-name)} {
+		border-bottom: 5px solid $color-value;
+	}
+	.border-top--#{inspect($color-name)} {
+		border-top: 5px solid $color-value;
+	}
+	.border-right--#{inspect($color-name)} {
+		border-right: 1px solid $color-value;
+	}
+	.border-left--#{inspect($color-name)} {
+		border-left: 1px solid $color-value;
+	}
+	.fill--#{inspect($color-name)} {
+		fill: $color-value;
+	}
+}
+
+// --- Space --- //
+
+@each $size-name, $size-value in $sizes {
+	.m#{$size-name} { margin:  $size-value; }
+	.p#{$size-name} { padding: $size-value; }
+	.mh#{$size-name} { margin-right: $size-value; margin-left: $size-value; }
+	.mv#{$size-name} { margin-top: $size-value; margin-bottom: $size-value; } 
+	.ph#{$size-name} { padding-right: $size-value; padding-left: $size-value; }
+	.pv#{$size-name} { padding-top: $size-value; padding-bottom: $size-value; } 
+
+	@each $side-name, $side-direction in $sides {
+		.m#{$side-name}#{$size-name} { margin-#{$side-direction}: $size-value; }
+		.p#{$side-name}#{$size-name} { padding-#{$side-direction}: $size-value; }
+		.m#{$side-name}a { margin-#{$side-direction}: auto; }
+		.m#{$side-name}0 { margin-#{$side-direction}: 0; }
+	}
+}
+
+@each $breakpoint-name, $breakpoint-size in $breakpoints {
+	@media (min-width: #{$breakpoint-size}) {
+		@each $size-name, $size-value in $sizes {
+			.m#{$size-name}--#{$breakpoint-name} { margin:  $size-value; }
+			.p#{$size-name}--#{$breakpoint-name} { padding: $size-value; }
+			.mh#{$size-name}--#{$breakpoint-name} { margin-right: $size-value; margin-left: $size-value; }
+			.mv#{$size-name}--#{$breakpoint-name} { margin-top: $size-value; margin-bottom: $size-value; } 
+			.ph#{$size-name}--#{$breakpoint-name} { padding-right: $size-value; padding-left: $size-value; }
+			.pv#{$size-name}--#{$breakpoint-name} { padding-top: $size-value; padding-bottom: $size-value; } 
+
+			@each $side-name, $side-direction in $sides {
+				.m#{$side-name}#{$size-name}--#{$breakpoint-name} { margin-#{$side-direction}: $size-value; }
+				.p#{$side-name}#{$size-name}--#{$breakpoint-name} { padding-#{$side-direction}: $size-value; }
+				.m#{$side-name}a--#{$breakpoint-name} { margin-#{$side-direction}: auto; }
+				.m#{$side-name}0--#{$breakpoint-name} { margin-#{$side-direction}: 0; }
+			}
+		}
+	}
+}
+
+// --- Alignment --- //
+
+@each $alignment-name, $alignment-direction in $text-alignments {
+	.t#{$alignment-name} {
+		text-align: #{$alignment-direction};
+	}
+}
+
+@each $breakpoint-name, $breakpoint-size in $breakpoints {
+	@media (min-width: #{$breakpoint-size}) {
+		@each $alignment-name, $alignment-direction in $text-alignments {
+			.t#{$alignment-name}--#{$breakpoint-name} {
+				text-align: #{$alignment-direction};
+			}
+		}
+	}
+}
+
+.rel {
+	position: relative;
+}
+
+.pos-abs {
+	position: absolute;
+}
+
+.pos-sticky {
+	position: sticky;
+	top: 50px;
+}
+
+// --- Layout --- //
+
+.dn  { display: none !important; }
+.db { display: block !important; }
+.dib { display: inline-block !important; }
+.di { display: inline; }
+.df { display: flex; }
+.dg { display: grid; }
+
+.flex--col { flex-direction: column; }
+.flex--row { flex-direction: row; }
+.flex__grow { flex-grow: 1; }
+.flex__basis { flex-basis: 0; }
+
+@each $breakpoint-name, $breakpoint-size in $breakpoints {
+	@media (min-width: #{$breakpoint-size}) {
+		.db--#{$breakpoint-name}  { display: block !important; }
+		.dn--#{$breakpoint-name}  { display: none !important; }
+		.di--#{$breakpoint-name}  { display: inline !important; }
+		.dib--#{$breakpoint-name} { display: inline-block !important; }
+		.df--#{$breakpoint-name}  { display: flex !important; }
+		.dg--#{$breakpoint-name}  { display: grid !important; }
+
+		.flex--col--#{$breakpoint-name} { flex-direction: column; }
+		.flex--row--#{$breakpoint-name} { flex-direction: row; }
+		.flex__grow--#{$breakpoint-name} { flex-grow: 1; }
+
+		.masonry-2col--#{$breakpoint-name} {
+			column-count: 2;
+			column-gap: map-get($sizes, md);
+
+			* {
+				break-inside: avoid-column;
+				page-break-inside: avoid;
+			}
+		}
+	}
+}
+
+.alignc {
+	align-items: center;
+}
+.justifyc {
+	justify-content: center;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.full-height {
+	height: 100%;
+}
+.auto-height {
+	height: auto;
+}
+.max-width {
+	max-width: 100%;
+}
+
+.border-width {
+	width: 10%;
+}
+
+.overflow-hidden {
+	overflow: hidden;
+}
+
+.fit-cover {
+	object-fit: cover;
+}
+.fit-contain {
+	object-fit: contain;
+}
+
+
+// --- Grid --- //
+
+.grid--jl {justify-items: start;}
+.grid--jc {justify-items: center;}
+.grid--jr {justify-items: end;}
+.grid--at {align-items: start;}
+.grid--am {align-items: center;}
+.grid--ab {align-items: end;}
+.grid--baseline {align-items: baseline;}
+.grid--jcc {justify-content: center;}
+
+
+@each $size-name, $size in $sizes {
+	.grid--gap#{$size-name} {
+		grid-gap: $size;
+	}
+	.grid--rowgap#{$size-name} {
+		grid-row-gap: $size;
+	}
+	.grid--colgap#{$size-name} {
+		grid-column-gap: $size;
+	}
+}
+
+@for $i from 0 through 12 {
+	.grid__#{$i}col {
+		grid-column-end: span $i;
+	}
+	.grid__#{$i}start {
+		grid-column-start: $i;
+	}
+}
+
+$order-limit: 4;
+
+@for $i from 1 through $order-limit {
+	.order#{$i} {
+		order: $i;
+	}
+}
+
+@each $breakpoint-name, $breakpoint-size in $breakpoints {
+	@media (min-width: #{$breakpoint-size}) {
+
+		.grid--jl--#{$breakpoint-name} {justify-items: start;}
+		.grid--jc--#{$breakpoint-name} {justify-items: center;}
+		.grid--jr--#{$breakpoint-name} {justify-items: end;}
+		.grid--at--#{$breakpoint-name} {align-items: start;}
+		.grid--am--#{$breakpoint-name} {align-items: center;}
+		.grid--ab--#{$breakpoint-name} {align-items: end;}
+		.grid--baseline--#{$breakpoint-name} {align-items: baseline;}
+		.grid--jcc--#{$breakpoint-name} {justify-content: center;}
+
+		@each $size-name, $size in $sizes {
+			.grid--gap#{$size-name}--#{$breakpoint-name} {
+				grid-gap: $size;
+			}
+			.grid--rowgap#{$size-name}--#{$breakpoint-name} {
+				grid-row-gap: $size;
+			}
+			.grid--colgap#{$size-name}--#{$breakpoint-name} {
+				grid-column-gap: $size;
+			}
+		}
+
+		@for $i from 0 through 12 {
+			.grid__#{$i}col--#{$breakpoint-name} {
+				grid-column-end: span $i;
+			}
+			.grid__#{$i}start--#{$breakpoint-name} {
+				grid-column-start: $i;
+			}
+		}
+
+		@for $i from 1 through $order-limit {
+			.order#{$i}--#{$breakpoint-name} {
+				order: $i;
+			}
+		}
+	}
+}

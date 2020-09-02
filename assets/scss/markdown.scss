@@ -1,0 +1,17 @@
+.markdown p {
+	margin-bottom: map-get($sizes, xs);
+}
+
+.markdown ul {
+	list-style-type: circle;
+	list-style-position: inside;
+	margin-bottom: map-get($sizes, xs);
+}
+
+.markdown li {
+	padding-bottom: map-get($sizes, xs);
+}
+
+.markdown a {
+	@extend .underline;
+}

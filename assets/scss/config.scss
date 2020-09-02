@@ -1,0 +1,49 @@
+/*
+// === Config Variables ===
+*/
+
+$all-colors: (
+	green	: #4C5249,
+	mdgreen	: #70756d,
+	ltgreen	: #b7bab6,
+	pink	: #F6EBE3,
+	dkpink	: #EBCEC5,
+	white	: #FFFFFF
+);
+
+$sizes : (
+	xxs:	5px,
+	xs :	15px,
+	sm :	30px,
+	md : 	60px,
+	lg :	120px
+);
+
+$font-family-serif: 'Marcellus', serif;
+$font-family-mono: 'Overpass Mono', monospace;
+
+$max-width: 1475px;
+
+$breakpoints : (
+	tablet	: 320px,
+	desktop	: 1024px,
+);
+
+$default-grid-columns: 1;
+$grid-columns : (
+	tablet	: 1,
+	desktop	: 12,
+);
+
+/*
+// === Config Getter Functions ===
+*/
+
+@function color($color-name) {
+	$color-found: map-has-key($all-colors, $color-name);
+	@if ($color-found == true) {
+		@return map-get($all-colors, $color-name);
+	} @else {
+		@warn "Color " + #{$color-name} + " doesn't exist.";
+	}
+}

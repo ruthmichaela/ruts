@@ -1,0 +1,99 @@
+/* marcellus-regular - latin */
+@font-face {
+  font-family: 'Marcellus';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/marcellus-v7-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Marcellus'), local('Marcellus-Regular'),
+       url('../fonts/marcellus-v7-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/marcellus-v7-latin-regular.woff') format('woff'), /* Modern Browsers */
+}
+
+/* overpass-mono-regular - latin */
+@font-face {
+  font-family: 'Overpass Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/overpass-mono-v5-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Overpass Mono Regular'), local('OverpassMono-Regular'),
+       url('../fonts/overpass-mono-v5-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/overpass-mono-v5-latin-regular.woff') format('woff'), /* Modern Browsers */
+}
+
+/* overpass-mono-700 - latin */
+@font-face {
+  font-family: 'Overpass Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/overpass-mono-v5-latin-700.eot'); /* IE9 Compat Modes */
+  src: local('Overpass Mono Bold'), local('OverpassMono-Bold'),
+       url('../fonts/overpass-mono-v5-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/overpass-mono-v5-latin-700.woff') format('woff'), /* Modern Browsers */
+}
+
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: $font-family-mono;
+	color: color(green);
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 26px;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.upper {
+	text-transform: uppercase;
+}
+
+.ws-pre {
+	white-space: pre;
+}
+
+.ws-nowrap {
+	white-space: nowrap;
+}
+.ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.letterspace {
+	letter-spacing: 1px;
+}
+
+h1, h2, .h2 {
+	margin-bottom: map-get($sizes, xs);
+	font-family: $font-family-serif;
+	font-size: 28px;
+	font-weight: 400;
+}
+
+h3, .h3 {
+  margin-bottom: map-get($sizes, xs);
+  font-family: $font-family-serif;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+p {
+	color: color(mdgreen);
+}
+
+li {
+  color: color(mdgreen);
+}
+
+
+
+.markdown strong {
+  color: color(green);
+}

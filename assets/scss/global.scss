@@ -1,0 +1,48 @@
+body {
+	min-height: 100vh;
+	display: grid;
+	grid-template-rows: 1fr auto;
+}
+
+hr {
+	border: 0;
+	border-bottom: 5px solid color(pink);
+	margin-bottom: map-get($sizes, sm);
+}
+
+.content {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: $max-width;
+}
+
+.content--grid {
+	display: grid;
+	grid-template-columns: repeat($default-grid-columns, 1fr);
+}
+@each $breakpoint-name, $columns in $grid-columns {
+	@media (min-width: map-get($breakpoints, $breakpoint-name)) {
+		.content--grid {
+			grid-template-columns: repeat($columns, 1fr);
+		}
+	}
+}
+
+.button {
+	border: 1px solid color(green);
+	color: color(green);
+	padding: 8px 12px;
+	text-transform: uppercase;
+}
+
+.sidebar {
+	height: calc(100% - 240px);
+}
+
+.hoverUnderline:hover, .hoverUnderline:hover * {
+	text-decoration: underline;
+}
+
+::marker {
+  color: color(dkpink);
+}

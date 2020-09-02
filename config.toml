@@ -1,0 +1,8 @@
+baseURL = ""
+languageCode = "en-us"
+title = "RÜTS"
+pluralizeListTitles = false
+disableKinds = [ "RSS" ]
+summaryLength = 40
+enableRobotsTXT = true
+paginate = 10

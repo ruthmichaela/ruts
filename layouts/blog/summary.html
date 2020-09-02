@@ -1,0 +1,13 @@
+<a href="{{ .Permalink }}">
+	<div>		
+		<div>
+			<div>
+				<h2>{{ .Title }}</h2>
+				<p>{{ .Date.Format "January 2, 2006" }} by {{ .Params.author }}</p>
+			</div>
+			<div>{{ .Summary }}</div>
+			<div>Read more</div>
+		</div>
+
+	</div>
+</a>
