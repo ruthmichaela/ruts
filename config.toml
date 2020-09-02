@@ -1,4 +1,4 @@
-baseURL = ""
+baseURL = "https://ruthmichaela.gitlab.io/ruts/"
 languageCode = "en-us"
 title = "RÜTS"
 pluralizeListTitles = false
