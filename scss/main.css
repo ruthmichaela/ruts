@@ -1567,27 +1567,27 @@ a, a:visited {
   font-family: 'Marcellus';
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/marcellus-v7-latin-regular.eot");
+  src: url("/fonts/marcellus-v7-latin-regular.eot");
   /* IE9 Compat Modes */
-  src: local("Marcellus"), local("Marcellus-Regular"), url("../fonts/marcellus-v7-latin-regular.woff2") format("woff2"), url("../fonts/marcellus-v7-latin-regular.woff") format("woff"); }
+  src: local("Marcellus"), local("Marcellus-Regular"), url("/fonts/marcellus-v7-latin-regular.woff2") format("woff2"), url("/fonts/marcellus-v7-latin-regular.woff") format("woff"); }
 
 /* overpass-mono-regular - latin */
 @font-face {
   font-family: 'Overpass Mono';
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/overpass-mono-v5-latin-regular.eot");
+  src: url("/fonts/overpass-mono-v5-latin-regular.eot");
   /* IE9 Compat Modes */
-  src: local("Overpass Mono Regular"), local("OverpassMono-Regular"), url("../fonts/overpass-mono-v5-latin-regular.woff2") format("woff2"), url("../fonts/overpass-mono-v5-latin-regular.woff") format("woff"); }
+  src: local("Overpass Mono Regular"), local("OverpassMono-Regular"), url("/fonts/overpass-mono-v5-latin-regular.woff2") format("woff2"), url("/fonts/overpass-mono-v5-latin-regular.woff") format("woff"); }
 
 /* overpass-mono-700 - latin */
 @font-face {
   font-family: 'Overpass Mono';
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/overpass-mono-v5-latin-700.eot");
+  src: url("/fonts/overpass-mono-v5-latin-700.eot");
   /* IE9 Compat Modes */
-  src: local("Overpass Mono Bold"), local("OverpassMono-Bold"), url("../fonts/overpass-mono-v5-latin-700.woff2") format("woff2"), url("../fonts/overpass-mono-v5-latin-700.woff") format("woff"); }
+  src: local("Overpass Mono Bold"), local("OverpassMono-Bold"), url("/fonts/overpass-mono-v5-latin-700.woff2") format("woff2"), url("/fonts/overpass-mono-v5-latin-700.woff") format("woff"); }
 
 body {
   -webkit-font-smoothing: antialiased;
