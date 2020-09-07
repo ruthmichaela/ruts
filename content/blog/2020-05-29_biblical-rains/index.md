@@ -3,9 +3,10 @@ title: "Biblical Rains"
 date: 2020-05-29
 author: Ruth Reyer
 resources:
-- name: header
-  src: shakti-1.png
-  title: woman in river
+- src: biblical-rains-1.jpg
+  title: Closeup of slugs on lettuce
+- src: biblical-rains-2.jpg
+  title: Slugs on lettuce
 ---
 
 As my memory serves me, May is always pretty rainy. Two years ago as my husband and I were planning for our early June, outdoor wedding I remember getting to the end of May after nearly 30 days straight rainshowers and wondering if I'd made a mistake not planning for anything but the perfect sunny day. As luck would have it, our wedding was the first day in more than a month the rain passed over. We said our vows out in the pasture, under the most welcome sun rays I can ever remember.
