@@ -136,16 +136,6 @@ $text-alignments: (
 		.flex--col--#{$breakpoint-name} { flex-direction: column; }
 		.flex--row--#{$breakpoint-name} { flex-direction: row; }
 		.flex__grow--#{$breakpoint-name} { flex-grow: 1; }
-
-		.masonry-2col--#{$breakpoint-name} {
-			column-count: 2;
-			column-gap: map-get($sizes, md);
-
-			* {
-				break-inside: avoid-column;
-				page-break-inside: avoid;
-			}
-		}
 	}
 }
 

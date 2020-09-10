@@ -46,3 +46,12 @@ hr {
 ::marker {
   color: color(dkpink);
 }
+
+video {
+	max-width: 100%;
+	height: auto;
+}
+
+summary {
+	cursor: pointer;
+}

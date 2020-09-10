@@ -8,7 +8,8 @@ resources:
 - src: kamut-and-brussels.jpg
   title: Brussel sprouts and grains on plate
 recipe:
-- title: Balsamic Roasted Brussel Sprouts and Kamut
+  open: false
+  title: Balsamic Roasted Brussel Sprouts and Kamut
   instructions: |
     **Ingredients**
 
@@ -70,8 +71,6 @@ recipe:
 
     Plate in order: kamut, brussels, sauce (drizzled with spoon), oregano, onions
     Give gratitude and enjoy.
-
-
 ---
 
 Cooking is one of my very favorite means of creativity. Perhaps this is why I enjoy gardening so much, the pre-req to a good meal. I think getting lost in something that brings you joy is one of the simplest and most true forms of meditation. I find that often in the kitchen.

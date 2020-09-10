@@ -2,119 +2,8 @@
 
 {{ define "main" }}
 <div class="posts phxs content content--grid grid--gapsm--desktop grid--rowgapsm--tablet grid--rowgapmd--desktop" data-page="{{ .Paginator.PageNumber }}" data-total-elements="{{ .Paginator.TotalNumberOfElements }}" data-total-pages="{{ .Paginator.TotalPages }}">
-	<!-- LOGO -->
-<!-- 	<div class="grid__1start--desktop">
-		<div class="mrxs mlxs mtxs mbxs dn--desktop">
-			<img src="/img/logo-h.png">
-		</div>
-		<div class="grid__2start--desktop phsm dn dib--desktop border-right--ltgreen">
-			<img src="/img/logo-v.png">
-		</div>
-	</div> -->
-	<!-- CONTENT-->
-	<!-- .Site.RegularPages -->
 	{{ range .Paginator.Pages }}
-		{{ if eq .Params.layout "short" }}
-		<!-- POST STYLE -->
-			<div class="pxs psm--desktop border--ltgreen grid_12col grid__9col--desktop grid__3start--desktop mbsm mbmd--desktop">
-				<div class="tc">
-					<a class="hoverUnderline tc dib mbxs mla mra" href="{{ .RelPermalink }}"><time class="letterspace" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time></a>
-				</div>
-				<h1 class="tc upper letterspace">{{ .Title }}</h1>
-				<div class="mbsm mra mla border-bottom--pink border-width"></div>
-				<div class="markdown mbxs mbmd--desktop">{{ .Content }}</div>
-			</div>
-		{{ else if eq .Params.layout "article" }}
-			<div class="grid_12col grid__9col--desktop grid__3start--desktop mbsm mbmd--desktop">
-				<div class="grid__3start--desktop mbsm">
-					<a class="hoverUnderline" href="{{ .RelPermalink }}"><time class="dib mbxs letterspace" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time></a>
-					<h1 class="upper letterspace">{{ .Title }}</h1>
-					<div class="mra border-bottom--pink border-width"></div>
-				</div>
-
-				<div class="dg df--desktop">
-					<div class="markdown mbxs prsm--desktop order2 order1--desktop flex__basis flex__grow--desktop">{{ .Content }}</div>
-				</div>
-			</div>
-
-		{{ else if eq .Params.layout "gallery" }}
-			<div class="grid__12col grid__9col--desktop grid__3start--desktop mbsm mbmd--desktop">
-				<div class="grid__3start--desktop mbsm">
-					<a class="hoverUnderline" href="{{ .RelPermalink }}"><time class="dib mbxs letterspace" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time></a>
-					<h1 class="upper letterspace">{{ .Title }}</h1>
-					<div class="mra border-bottom--pink border-width"></div>
-				</div>
-
-				<div class="dg df--desktop">
-					<div class="markdown mbxs prsm--desktop order2 order1--desktop flex__basis flex__grow--desktop">{{ .Content }}</div>
-				</div>
-				<!-- GALLERY -->
-				<div class="mbsm mbmd--desktop order1 order2--desktop flex__grow--desktop flex__basis flex__grow--desktop">
-					<div class="df--desktop mbsm mbmd--desktop">
-						<div class="flex--row masonry-2col--desktop mbsm">
-							{{ range (.Resources.ByType "image") }}
-								<figure class="mbsm">
-									<img src="{{ (.Resize "800x jpg").RelPermalink }}" srcset="{{ (.Resize "500x jpg").RelPermalink }} 500w, {{ (.Resize "800x jpg").RelPermalink }} 800w, {{ (.Resize "1000x jpg").RelPermalink }} 1000w" sizes="(min-width: 1100px) 1100px, 100vw" alt="{{ .Title }}" class="max-width" loading="lazy">
-									<figcaption class="mbsm--desktop color--mdgreen">{{ .Params.description }}</figcaption>
-								</figure>
-							{{ end }}
-						</div>
-					<div>
-				</div>
-			</div>
-
-		{{ else if eq .Params.layout "recipe" }}
-			<div class="grid__12col grid__9col--desktop grid__3start--desktop mbxs mbmd--desktop">
-				<div class="grid__3start--desktop mbsm mbmd--desktop">
-					<a class="hoverUnderline" href="{{ .RelPermalink }}"><time class="dib mbxs letterspace" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time></a>
-					<h1 class="upper letterspace">{{ .Title }}</h1>
-					<div class="mra border-bottom--pink border-width"></div>
-				</div>
-
-				<div class="dg df--desktop">
-					<div class="markdown mbsm prsm--desktop order2 order1--desktop flex__basis flex__grow--desktop">
-						<div class="mbsm">
-							{{ .Content }}
-						</div>
-
-						{{ with .Params.recipe }}
-							{{ range . }}
-								<details>
-									<summary class="mbxs mbsm--desktop"><h2 class="di h3">{{ .title }}</h2></summary>
-									<div>{{ .instructions | markdownify }}</div>
-								</details>
-							{{ end }}
-						{{ end }}
-					</div>
-					<div class="mbsm order1 order2--desktop flex__grow--desktop flex__basis flex__grow--desktop">
-						{{ range (.Resources.ByType "image") }}
-							<img src="{{ (.Resize "800x jpg").RelPermalink }}" srcset="{{ (.Resize "500x jpg").RelPermalink }} 500w, {{ (.Resize "800x jpg").RelPermalink }} 800w, {{ (.Resize "1000x jpg").RelPermalink }} 1000w" sizes="(min-width: 1100px) 1100px, 100vw" alt="{{ .Title }}" class="max-width mbxs mbsm--desktop" loading="lazy">
-						{{ end }}
-					</div>
-				</div>
-
-			</div>
-
-		{{ else }}
-		<!-- BLOG STYLE -->
-			<div class="grid_12col grid__9col--desktop grid__3start--desktop mbsm mbmd--desktop">
-				<div class="grid__3start--desktop xs mbsm mbmd--desktop">
-					<a class="hoverUnderline" href="{{ .RelPermalink }}"><time class="dib mbxs letterspace" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time></a>
-					<h1 class="upper letterspace">{{ .Title }}</h1>
-					<div class="mra border-bottom--pink border-width"></div>
-				</div>
-
-				<div class="dg df--desktop">
-					<div class="markdown mbxs prsm--desktop order2 order1--desktop flex__basis flex__grow--desktop">{{ .Content }}</div>
-
-					<div class="mbsm border-left--ltgreen order1 order2--desktop flex__grow--desktop flex__basis flex__grow--desktop">
-						{{ range (.Resources.ByType "image") }}
-							<img src="{{ (.Resize "800x jpg").RelPermalink }}" srcset="{{ (.Resize "500x jpg").RelPermalink }} 500w, {{ (.Resize "800x jpg").RelPermalink }} 800w, {{ (.Resize "1000x jpg").RelPermalink }} 1000w" sizes="(min-width: 1100px) 1100px, 100vw" alt="{{ .Title }}" class="max-width plxs plsm--desktop mbxs mbsm--desktop" loading="lazy">
-						{{ end }}
-					</div>
-				</div>
-			</div>
-		{{ end }}
+		{{ partial "post_content.html" . }}
 	{{ end }}
 </div>
 
@@ -123,7 +12,7 @@
 
 	<noscript>
 		<div class="content content--grid grid--gapsm--desktop phxs">
-			<div class="df flex--row grid_12col grid__9col--desktop grid__3start--desktop">
+			<div class="df flex--row grid__12col grid__9col--desktop grid__3start--desktop">
 			{{ if .Paginator.HasPrev }}<a class="button" href="{{ .Paginator.Prev.URL }}">&larr; Previous</a>{{ end }}
 			<span class="flex__grow"></span>
 			{{ if .Paginator.HasNext }}<a class="button" href="{{ .Paginator.Next.URL }}">Next &rarr;</a>{{ end }}

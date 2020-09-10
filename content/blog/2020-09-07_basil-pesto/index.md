@@ -1,5 +1,5 @@
 ---
-title: "Hand-Sown / Home-Made"
+title: "Hand-Sown & Home-Made"
 date: 2020-09-07
 author: Ruth Reyer
 layout: recipe
@@ -14,7 +14,8 @@ resources:
 - src: basil-pesto-3.jpg
   title: pesto in jar with basil in background
 recipe:
-- title: Walnut and Garlic Basil Pesto
+  open: true
+  title: Walnut and Garlic Basil Pesto
   instructions: |
     **Ingredients**
 
