@@ -1,4 +1,4 @@
-{{ define "title" }}Home{{ end }}
+{{ define "title" }}{{ .Title }}{{ end }}
 
 {{ define "main" }}
 <div class="posts phxs content content--grid grid--gapsm--desktop grid--rowgapsm--tablet grid--rowgapmd--desktop" data-page="{{ .Paginator.PageNumber }}" data-total-elements="{{ .Paginator.TotalNumberOfElements }}" data-total-pages="{{ .Paginator.TotalPages }}">

@@ -1,7 +1,6 @@
 ---
 title: "From Seed We Start"
 date: 2020-04-19
-author: Ruth Reyer
 resources:
 - src: from-seed-we-start.jpg
   title: Cucumber starters in tray

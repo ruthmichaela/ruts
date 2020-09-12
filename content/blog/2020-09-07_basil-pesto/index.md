@@ -1,9 +1,7 @@
 ---
 title: "Hand-Sown & Home-Made"
 date: 2020-09-07
-author: Ruth Reyer
 layout: recipe
-draft: false
 resources:
 - src: basil-pesto-0.jpg
   title: Basil plant in the garden
@@ -13,6 +11,7 @@ resources:
   title: basil and oil in food processor
 - src: basil-pesto-3.jpg
   title: pesto in jar with basil in background
+
 recipe:
   open: true
   title: Walnut and Garlic Basil Pesto

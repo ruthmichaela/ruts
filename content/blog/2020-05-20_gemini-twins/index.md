@@ -1,7 +1,6 @@
 ---
 title: "Gemini Twins"
 date: 2020-05-20
-author: Ruth Reyer
 resources:
 - src: gemini-fawns.jpg
   title: twin fawns in ivy

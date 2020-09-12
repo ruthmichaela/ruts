@@ -1,11 +1,10 @@
 ---
 title: "On Starting Lavender"
 date: 2020-04-18
-author: Ruth Reyer
 resources:
 - src: on-starting-lavender.jpg
   title: Small lavender plant starter
-- src: on-starting-lavender-1.jpg
+- src: starting-lavender-1.jpg
   title: Tray of small lavender plant starters
 ---
 

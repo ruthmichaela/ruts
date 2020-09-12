@@ -1,7 +1,6 @@
 ---
 title: "I Let Go"
 date: 2020-06-06
-author: Ruth Reyer
 resources:
 - src: let-go.jpg
   title: cabbage with curve of water drops on leaf.

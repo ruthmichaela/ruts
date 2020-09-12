@@ -1,7 +1,6 @@
 ---
 title: "Insects of our Virginia Garden"
 date: 2020-09-05
-author: Ruth Reyer
 layout: gallery
 resources:
 - src: bee-01.JPG

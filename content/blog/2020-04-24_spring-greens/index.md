@@ -1,7 +1,6 @@
 ---
 title: "Spring Is For Greens"
 date: 2020-04-24
-author: Ruth Reyer
 resources:
 - src: spring-is-for-greens.jpg
   title: lettuce in garden bed

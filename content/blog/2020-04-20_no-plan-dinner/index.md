@@ -1,9 +1,7 @@
 ---
 title: "A No-Plan Dinner"
 date: 2020-04-20
-author: Ruth Reyer
 layout: recipe
-draft: false
 resources:
 - src: kamut-and-brussels.jpg
   title: Brussel sprouts and grains on plate

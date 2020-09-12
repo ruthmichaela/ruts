@@ -1,9 +1,6 @@
 ---
 title: "I, Shakti"
 date: 2020-05-10
-author: Ruth Reyer
-short: false
-draft: false
 resources:
 - src: i-shakti.jpg
   title: woman doing balance pose in river

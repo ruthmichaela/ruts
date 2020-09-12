@@ -1,7 +1,6 @@
 ---
 title: "Tomatoes Are In"
 date: 2020-04-29
-author: Ruth Reyer
 resources:
 - src: tomatoes-are-in.jpg
   title: Small tomatoes in starter pots
