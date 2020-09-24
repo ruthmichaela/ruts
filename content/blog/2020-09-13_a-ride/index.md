@@ -4,7 +4,7 @@ date: 2020-09-13
 author: Ruth Reyer
 resources:
 - src: moto.jpg
-  title: lettuce in garden bed
+  title: woman on motorcycle in the woods
 ---
 
 The vibrations rattle my bones and like a seismic shift I can feel everything unfolding.
