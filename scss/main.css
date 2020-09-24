@@ -1555,6 +1555,7 @@ a, a:visited {
   font-family: 'Marcellus';
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: url("/fonts/marcellus-v7-latin-regular.eot");
   /* IE9 Compat Modes */
   src: local("Marcellus"), local("Marcellus-Regular"), url("/fonts/marcellus-v7-latin-regular.woff2") format("woff2"), url("/fonts/marcellus-v7-latin-regular.woff") format("woff"); }
@@ -1564,6 +1565,7 @@ a, a:visited {
   font-family: 'Overpass Mono';
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: url("/fonts/overpass-mono-v5-latin-regular.eot");
   /* IE9 Compat Modes */
   src: local("Overpass Mono Regular"), local("OverpassMono-Regular"), url("/fonts/overpass-mono-v5-latin-regular.woff2") format("woff2"), url("/fonts/overpass-mono-v5-latin-regular.woff") format("woff"); }
@@ -1573,6 +1575,7 @@ a, a:visited {
   font-family: 'Overpass Mono';
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: url("/fonts/overpass-mono-v5-latin-700.eot");
   /* IE9 Compat Modes */
   src: local("Overpass Mono Bold"), local("OverpassMono-Bold"), url("/fonts/overpass-mono-v5-latin-700.woff2") format("woff2"), url("/fonts/overpass-mono-v5-latin-700.woff") format("woff"); }
@@ -1680,6 +1683,13 @@ video {
 summary {
   cursor: pointer; }
 
+.galleryGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px; }
+  @media (min-width: 1024px) {
+    .galleryGrid {
+      grid-template-columns: 1fr 1fr; } }
 .markdown p {
   margin-bottom: 30px; }
 
