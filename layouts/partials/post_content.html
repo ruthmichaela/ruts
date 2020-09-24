@@ -56,10 +56,10 @@
 		
 		{{/* Gallery */}}
 		<div class="mbsm mbmd--desktop order1 order2--desktop flex__grow--desktop flex__basis flex__grow--desktop">
-			<div class="dg content--grid grid--gapsm mbsm mbmd--desktop">
+			<div class="galleryGrid mbsm mbmd--desktop">
 				{{ range (.Resources.ByType "image") }}
-					<figure class="grid__12col grid__6col--desktop">
-						<img src="{{ (.Resize "800x jpg").RelPermalink }}" srcset="{{ (.Resize "600x jpg").RelPermalink }} 600w, {{ (.Resize "1000x jpg").RelPermalink }} 1000w" sizes="(min-width: 1024px) 525px, calc(100vw - 60px)" alt="{{ .Title }}" class="max-width" loading="lazy">
+					<figure>
+						<img src="{{ (.Resize "800x jpg").RelPermalink }}" srcset="{{ (.Resize "600x jpg").RelPermalink }} 600w, {{ (.Resize "1000x jpg").RelPermalink }} 1000w" sizes="(min-width: 1024px) 525px, calc(100vw - 60px)" alt="{{ .Title }}" class="full-width" loading="lazy">
 						<figcaption class="color--mdgreen">{{ .Params.description }}</figcaption>
 					</figure>
 				{{ end }}
