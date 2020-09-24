@@ -1,3 +1,9 @@
+{{ define "description" }}{{ .Summary }}{{ end }}
+
+{{ define "head" }}
+{{ template "_internal/opengraph.html" . }}
+{{ end }}
+
 {{ define "main" }}
 
 <div class="phxs content content--grid grid--gapsm--desktop grid--rowgapsm--tablet grid--rowgapmd--desktop">

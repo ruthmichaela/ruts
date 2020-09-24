@@ -1,7 +1,6 @@
 ---
 title: "Cherry Bell"
 date: 2020-04-29
-author: Ruth Reyer
 resources:
 - src: radish.jpg
   title: cherry bell radish in garden bed

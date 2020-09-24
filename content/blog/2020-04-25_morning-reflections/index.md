@@ -2,8 +2,6 @@
 title: "Morning Reflections"
 layout: short
 date: 2020-04-25
-author: Ruth Reyer
-draft: false
 ---
 
 The thoughts swirl and then settle, like a snow globe shaken for a season and then set aside.

@@ -2,8 +2,6 @@
 title: "Expansion"
 layout: short
 date: 2020-04-23
-author: Ruth Reyer
-draft: false
 ---
 
 Energy always moving. In me. Through me.

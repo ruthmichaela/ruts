@@ -55,3 +55,13 @@ video {
 summary {
 	cursor: pointer;
 }
+
+.galleryGrid {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: map-get($sizes, sm);
+
+	@media (min-width: map-get($breakpoints, desktop)) {
+		grid-template-columns: 1fr 1fr;
+	}
+}

@@ -1,7 +1,6 @@
 ---
 title: "Biblical Rains"
 date: 2020-05-29
-author: Ruth Reyer
 resources:
 - src: biblical-rains-1.jpg
   title: Closeup of slugs on lettuce

@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>RÜTS</title>
+	<title>{{ block "title" . }}{{ .Title }} &ndash; {{ .Site.Title }}{{ end }}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{{ range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+	{{ end -}}
+
+	<meta name="description" content="{{ block "description" . }}{{ $.Site.Params.description }}{{ end }}">
+	{{ block "head" . }}{{ end }}
+
 	{{ $styles := resources.Get "scss/main.scss" | resources.ToCSS }}
-	<link rel="stylesheet" href="{{ $styles.Permalink }}">
 	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -19,25 +25,35 @@
 	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 	<link rel="manifest" href="/manifest.json">
+
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
 
-	<script src="/loader.js" defer></script>
+	<link rel="preload" href="/fonts/marcellus-v7-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="/fonts/overpass-mono-v5-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="/fonts/overpass-mono-v5-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="stylesheet" href="{{ $styles.Permalink }}">
+	
+	{{ if (eq .RelPermalink "/") }}<script src="/loader.js" defer></script>{{ end }}
 </head>
 <body class="bg--green">
-	<main class="bg--white rel mxs msm--desktop pvlg--desktop">
-		<div class="content dn--desktop">
-			<div class="mrxs mlxs mtsm mbsm">
-				<a href="/"><img src="/img/logo-h.svg"></a>
+	<div class="bg--white rel mxxs mxs--tablet msm--desktop pvlg--desktop">
+		<nav>
+			<div class="content dn--desktop">
+				<div class="mrxs mlxs mtsm mbsm">
+					<a href="/"><img src="/img/logo-h.svg" alt="RÜTS"></a>
+				</div>
 			</div>
-		</div>
 
-		<div class="content pos-abs sidebar phmd prsm dn dib--desktop border-right--ltgreen">
-			<a href="/"><img src="/img/logo-v.svg" class="pos-sticky"></a>
-		</div>
+			<div class="content pos-abs sidebar phmd prsm dn dib--desktop border-right--ltgreen">
+				<a href="/"><img src="/img/logo-v.svg" class="pos-sticky" alt="RÜTS"></a>
+			</div>
+		</nav>
 
+		<main>
 		{{ block "main" . }}{{ end }}
-	</main>
+		</main>
+	</div>
 </body>
 </html>

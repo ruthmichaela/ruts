@@ -2,7 +2,12 @@ baseURL = ""
 languageCode = "en-us"
 title = "RÜTS"
 pluralizeListTitles = false
-disableKinds = [ "RSS" ]
+disableKinds = [ ]
 summaryLength = 40
 enableRobotsTXT = true
 paginate = 10
+copyright = "All rights reserved."
+
+[params]
+  description = "Site description here."
+  author = "Ruth Reyer"

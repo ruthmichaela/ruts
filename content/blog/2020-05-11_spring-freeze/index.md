@@ -2,8 +2,6 @@
 title: "Spring Freeze"
 layout: short
 date: 2020-05-11
-author: Ruth Reyer
-draft: false
 ---
 
 Gardening is an endless conversation with nature. Forever being humbled by a force much greater than myself. Forever learning this waltz. She steps, I step... maybe one day it will look prettier.

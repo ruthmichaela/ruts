@@ -1,7 +1,6 @@
 ---
 title: "Contentment"
 date: 2020-05-07
-author: Ruth Reyer
 layout: article
 ---
 
