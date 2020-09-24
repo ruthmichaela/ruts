@@ -1622,7 +1622,8 @@ h3, .h3 {
   letter-spacing: 0; }
 
 p {
-  color: #70756d; }
+  color: #70756d;
+  margin-bottom: 60px; }
 
 li {
   color: #70756d; }
@@ -1680,7 +1681,7 @@ summary {
   cursor: pointer; }
 
 .markdown p {
-  margin-bottom: 15px; }
+  margin-bottom: 30px; }
 
 .markdown ul {
   list-style-type: circle;
