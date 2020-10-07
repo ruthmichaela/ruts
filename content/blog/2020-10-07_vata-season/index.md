@@ -17,7 +17,7 @@ Get to the mat, breath in and out and in and out, and sing from deep in your che
 
 I listen to the leaves crack as they let go of the branches they've known all their lives. 
 I lose myself in the planting of fall harvest and the kneading of dough. 
-I dissapear into the woods and step softly, one foot following the other.
+I disappear into the woods and step softly, one foot following the other.
 My breath syncing with the prana, without effort.
 
 I am tossed between the autumn wind, as it whispers narratives to my soft mind, once again. 
