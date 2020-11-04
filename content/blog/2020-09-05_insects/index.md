@@ -53,4 +53,4 @@ resources:
     description: This hornworm has been attacked by a bracanoid wasp. The wasp lays eggs inside of the worm where they feed and emerge into the pupa stage. This event results in death of the Hornworm. Wasps are a garden ally, as these worms can cause enormous damage to a tomato crop.
 ---
 
-Some are friends, some are not, but all are truly beautiful. Nature never ceases to amaze me, with it's diversity of designs and patterns, logic and engineering. Each creature with it's own line in this single song we call uni-verse. This gallery is only a brief collection of all that we witnessed over the summer season. Many, I am sure, evaded our eyes altogether.
+Some are friends, some are not, but all are truly beautiful. Nature never ceases to amaze me, with its diversity of designs and patterns, logic and engineering. Each creature with its own line in this single song we call uni-verse. This gallery is only a brief collection of all that we witnessed over the summer season. Many, I am sure, evaded our eyes altogether.
